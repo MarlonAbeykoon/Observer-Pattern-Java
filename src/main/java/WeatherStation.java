@@ -6,11 +6,14 @@ import java.util.Set;
  * Chrissy Soulakian
  * ObserverPattern Project
  * Created on 4/17/2016
+ *
+ * This ConcreteSubject both stores the temperature and notifies
+ * its observers of changes to the temperature.
  */
 public class WeatherStation implements WeatherSubject {
 
     Set<WeatherObserver> setOfWeatherObservers;
-    int temp;
+    private int temp;
     String name;
 
     public WeatherStation(String name, int temperature) {
@@ -32,7 +35,7 @@ public class WeatherStation implements WeatherSubject {
     @Override
     public void sendNotification() {
         for(WeatherObserver observer : setOfWeatherObservers) {
-            observer.update(temp);
+            observer.update();
         }
     }
 
@@ -40,5 +43,9 @@ public class WeatherStation implements WeatherSubject {
         System.out.println("\nWeather Station " + name + " is setting the temperature to " + newTemperature + ".");
         temp = newTemperature;
         sendNotification();
+    }
+
+    public int getTemp() {
+        return temp;
     }
 }

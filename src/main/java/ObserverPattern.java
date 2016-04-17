@@ -11,8 +11,8 @@ public class ObserverPattern {
                 "temperature of 70 degrees Fahrenheit. ******");
         WeatherStation weatherStation = new WeatherStation("Alpha", 70);
 
-        WeatherCustomer wc1 = new WeatherCustomer("John");
-        WeatherCustomer wc2 = new WeatherCustomer("Natalie");
+        WeatherCustomer wc1 = new WeatherCustomer("John", weatherStation);
+        WeatherCustomer wc2 = new WeatherCustomer("Natalie", weatherStation);
 
 
         System.out.println("****** New customers, John and Natalie, have just subscribed " +
@@ -28,7 +28,7 @@ public class ObserverPattern {
 
         weatherStation.setTemp(68);
 
-        TVStation tv = new TVStation("NBC");
+        TVStation tv = new TVStation("NBC", weatherStation);
         System.out.println("\n****** The NBC TV Station has just subscribed " +
                 "to Weather Station Alpha. ******");
         weatherStation.addObserver(tv);

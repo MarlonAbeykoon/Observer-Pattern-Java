@@ -14,7 +14,8 @@ public class ObserverPattern {
         WeatherCustomer wc1 = new WeatherCustomer("John");
         WeatherCustomer wc2 = new WeatherCustomer("Natalie");
 
-        System.out.println("****** New customers John and Natalie have just subscribed " +
+
+        System.out.println("****** New customers, John and Natalie, have just subscribed " +
                 "to Weather Station Alpha. ******");
         weatherStation.addObserver(wc1);
         weatherStation.addObserver(wc2);
@@ -26,5 +27,12 @@ public class ObserverPattern {
         weatherStation.removeObserver(wc1);
 
         weatherStation.setTemp(68);
+
+        TVStation tv = new TVStation("NBC");
+        System.out.println("\n****** The NBC TV Station has just subscribed " +
+                "to Weather Station Alpha. ******");
+        weatherStation.addObserver(tv);
+
+        weatherStation.setTemp(73);
     }
 }

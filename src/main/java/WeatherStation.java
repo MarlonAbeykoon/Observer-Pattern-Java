@@ -37,7 +37,7 @@ public class WeatherStation implements WeatherSubject {
     }
 
     public void setTemp(int newTemperature) {
-        System.out.println("\nWeather Station" + name + " is setting the temperature to " + newTemperature + ".");
+        System.out.println("\nWeather Station " + name + " is setting the temperature to " + newTemperature + ".");
         temp = newTemperature;
         sendNotification();
     }

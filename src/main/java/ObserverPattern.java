@@ -2,6 +2,8 @@
  * Chrissy Soulakian
  * ObserverPattern Project
  * Created on 4/17/2016
+ *
+ * Client containing the main method
  */
 public class ObserverPattern {
 

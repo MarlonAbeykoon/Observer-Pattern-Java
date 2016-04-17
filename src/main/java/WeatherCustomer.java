@@ -9,8 +9,8 @@
  */
 public class WeatherCustomer implements WeatherObserver {
 
-    private String name;
-    private WeatherStation station;
+    private final String name;
+    private final WeatherStation station;
     private int currentTemp;
 
     public WeatherCustomer(String name, WeatherStation station) {

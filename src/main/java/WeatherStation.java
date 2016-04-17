@@ -12,7 +12,7 @@ import java.util.Set;
  */
 public class WeatherStation implements WeatherSubject {
 
-    Set<WeatherObserver> setOfWeatherObservers;
+    private Set<WeatherObserver> setOfWeatherObservers;
     private int temp;
     String name;
 
@@ -47,5 +47,9 @@ public class WeatherStation implements WeatherSubject {
 
     public int getTemp() {
         return temp;
+    }
+
+    public Set<WeatherObserver> getSetOfWeatherObservers() {
+        return setOfWeatherObservers;
     }
 }

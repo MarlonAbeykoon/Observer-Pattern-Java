@@ -5,7 +5,7 @@
 
 **Spring 2016 - Project 3 Observer Pattern**
 
-The purpose of the observer pattern is represent a one-to-many dependency so that
+The purpose of the observer pattern is to represent a one-to-many dependency so that
 when one object changes its state, all of its dependencies are notified of the
 change and update automatically. The design allows the observer objects to
 synchronize their local state of the subject with the subject's current state.
